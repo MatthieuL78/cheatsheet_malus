@@ -6,7 +6,7 @@ Ajouter et modifier dans le fichier config/production.rb les lignes suivantes :
 config.assets.compile = true
 config.assets.precompile = ['*.js', '*.css', '*.css.erb']
 ```
-Ensuite on lance la compilation de la manière suivante :
+Ensuite on lance les compilations de la manière suivante :
 ```
 RAILS_ENV=production bundle exec rake assets:precompile
 ```
