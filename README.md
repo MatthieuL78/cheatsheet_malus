@@ -1,2 +1,2 @@
-# cheatsheet_malus
-All the information I need
+# Cheatsheet sur tout 
+Ici se trouve toutes les informations qui m'on permit de me debugger.
