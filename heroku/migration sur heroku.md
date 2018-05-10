@@ -1,4 +1,4 @@
-# Debugging pour les migrations
+# Debugging pour les migrations sur heroku
 
 ## Fail d'une migration a cause de la gem pg
 Il peut arriver que la gem pg crée un problème pendant une migration de database sur heroku (voir le warning dans le log au début du lancement de la migration)
