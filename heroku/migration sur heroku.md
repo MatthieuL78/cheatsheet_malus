@@ -7,3 +7,10 @@ Il faut retirer le 'without' de notre bundle qui persiste :
 bundle config --delete without
 ```
 Refaire ensuite un push vers le heroku en faisant les add et commit et la migration devrait fonctionner.
+
+## Fail d'une migration a cause de ETIMEDOUT
+Exemple :
+```
+ETIMEDOUT: connect ETIMEDOUT 50.19.103.36:5000
+```
+Il semble que c'est un problème du port 5000 (dans ce cas là). Il faut ouvrir le port pour faire la migration.
