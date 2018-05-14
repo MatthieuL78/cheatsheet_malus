@@ -64,3 +64,21 @@ Il faut retirer le 'without' de notre bundle qui persiste :
 ```
 bundle config --delete without
 ```
+
+## Fail a cause de la gem sqlite3
+La gem sqlite3 n'est pas lue par Heroku, il faut la mettre dans le group 'development' pour fonctionner. La gem pg prend le relais sur Heroku pour faire fontionner la database :
+```
+group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3'
+end
+```
+## Fail a cause de la gem devise
+```
+Devise.secret_key was not set
+```
+Il faut ajouter la clé présentée dans le log dans le fichier config/environments/production.rb :
+```
+config.secret_key_base = ENV["SECRET_KEY_BASE"]
+```
+En appelant la valeur de la clé depuis un fichier .env et avec l'aide de la gem dotenv.
