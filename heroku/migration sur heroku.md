@@ -13,4 +13,4 @@ Exemple :
 ```
 ETIMEDOUT: connect ETIMEDOUT 50.19.103.36:5000
 ```
-Il semble que c'est un problème du port 5000 (dans ce cas là). Il faut ouvrir le port pour faire la migration.
+Il semble que c'est un problème du port 5000 (dans ce cas là). Il faut soit ouvrir le port demandé ou soit faire l'action avec une connexion sécurisé.
