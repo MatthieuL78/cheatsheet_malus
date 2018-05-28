@@ -1,7 +1,7 @@
 # Debugging pour assets pipeline
 
 ## Erreur 404 - Fichier CSS et JS non reconnu
-Ajouter et modifier dans le fichier config/production.rb les lignes suivantes :
+Ajouter et modifier dans le fichier config/environments/production.rb les lignes suivantes :
 ```
 config.assets.compile = true
 config.assets.precompile = ['*.js', '*.css', '*.css.erb']
