@@ -6,11 +6,12 @@ Gemfile basique pour lancer sur heroku :
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.3.4'
+ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
-
+# Use sqlite3 as the database for Active Record
+gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -37,21 +38,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
 # Use to check ruby good behaviour
 gem 'rubocop'
 
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+# For the model user
+gem 'devise'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-  # Use to test for development
-  gem 'rspec-rails', '~> 3.7'
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3'
-  # Use to test automaticaly rspec
-  gem 'guard-rspec', require: false
 end
 
 group :development do
@@ -71,7 +69,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-group :production do 
+group :production do
   # use to manage database on heroku
   gem 'pg', '0.20.0'
 end
